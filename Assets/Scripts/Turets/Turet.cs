@@ -48,9 +48,8 @@ public abstract class Turet : MonoBehaviour
 
     protected void FindTarget()
     {
-        RaycastHit2D ray = Physics2D.Raycast(transform.position, transform.position, _range);
-
-        if(ray)
+         RaycastHit ray;
+        if(Physics.SphereCast(transform.position, _range, Vector3.forward, out ray))
         {
             if(ray.collider.gameObject.tag == "Player")
             {
