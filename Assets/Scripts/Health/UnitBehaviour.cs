@@ -13,11 +13,16 @@ public abstract class UnitBehaviour : MonoBehaviour, IDamageable
     #endregion
 
     #region Editor Fields
+    [SerializeField] private bool _drawGizmo;
     [Header("Units Stats")]
     [SerializeField] private float _startHealth = 100;
     [Space(10)]
     [SerializeField] protected float _maxHealth = 100;
     [SerializeField] protected float _minHealth = 0;
+    [Header("Floating Text")]
+    [SerializeField] private Transform _damageTextPoint;
+    [SerializeField] private Vector3 _textArea = Vector3.one;
+    [SerializeField] private DynamicTextData _damageTextData;
     #endregion
 
     protected float _currentHealth;
@@ -27,10 +32,20 @@ public abstract class UnitBehaviour : MonoBehaviour, IDamageable
     {
         SetHealth(_startHealth);
     }
+    protected virtual void OnDrawGizmos()
+    {
+        if (!_drawGizmo)
+            return;
+
+        var tcolor = Gizmos.color;
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(_damageTextPoint.position, _textArea*2);
+        Gizmos.color = tcolor;
+    }
     #endregion
 
     #region public Methods
-    public virtual void Die() 
+    public virtual void Die()
     {
         Destroy(gameObject);
     }
@@ -60,6 +75,8 @@ public abstract class UnitBehaviour : MonoBehaviour, IDamageable
 
     public void TakeDamage(float damage)
     {
+        CreateDamageText(damage);
+
         var predict = _currentHealth - damage;
         if (predict <= _minHealth)
         {
@@ -73,4 +90,20 @@ public abstract class UnitBehaviour : MonoBehaviour, IDamageable
         OnHealthChange?.Invoke();
     }
     #endregion
+
+    private void CreateDamageText(float damage)
+    {
+        if (!_damageTextData)
+            return;
+
+        if (!_damageTextPoint)
+            _damageTextPoint = transform;
+
+        var newPos = _damageTextPoint.position +
+            new Vector3(UnityEngine.Random.Range(-_textArea.x, _textArea.x),
+            UnityEngine.Random.Range(-_textArea.y, _textArea.y),
+            UnityEngine.Random.Range(-_textArea.z, _textArea.z));
+
+        DynamicTextManager.CreateText(newPos, damage.ToString(), _damageTextData);
+    }
 }
