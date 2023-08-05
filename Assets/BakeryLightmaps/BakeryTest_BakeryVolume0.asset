@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!117 &11700000
+Texture3D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 3
+  m_ColorSpace: 0
+  m_Format: 48
+  m_Width: 4
+  m_Height: 1
+  m_Depth: 4
+  m_MipCount: 1
+  m_DataSize: 128
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_UsageMode: 0
+  m_IsReadable: 1
+  image data: 128
+  _typelessdata: d537e837df37a2aa2a392e39283932b6eb38f238f03845b803350c350b3506b103380538f037973386368e367c368ab2e234e834de34cab494319a318c311ab2e038e238d03879b4353540353635e9aef4310332f93129b0342e3e2e302e2dae3e3842383638e93023342c3426347dadcf2fe02fd42f5bace829fa29f0290ba8
+  m_StreamData:
+    serializedVersion: 2
+    offset: 0
+    size: 0
+    path: 
