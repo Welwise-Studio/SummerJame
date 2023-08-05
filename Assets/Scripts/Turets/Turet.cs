@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro.EditorUtilities;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Turet : MonoBehaviour
@@ -29,6 +30,12 @@ public abstract class Turet : MonoBehaviour
         _nextTimeToFire = 0;
     }
 
+    protected virtual void Start()
+    {
+        _target = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+
     protected virtual void Update()
     {
         if(_attached)
@@ -41,37 +48,32 @@ public abstract class Turet : MonoBehaviour
         }
     }
 
-    protected void RotateToTarget()
+    protected virtual void FixedUpdate()
     {
-        transform.up = Vector3.MoveTowards(transform.up, _target.transform.position, _rotationSpeed * Time.deltaTime);
+        if(_detected)
+        {
+            Vector3 dirPlayer = (_target.transform.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(dirPlayer);
+            lookRotation.x = 0f; lookRotation.z = 0f;
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * _rotationSpeed);
+        }
     }
 
     protected void FindTarget()
     {
-         RaycastHit ray;
-        if(Physics.SphereCast(transform.position, _range, Vector3.forward, out ray))
+        if(Vector3.Distance(_target.position, transform.position) < _range)
         {
-            if(ray.collider.gameObject.tag == "Player")
+            if(!_detected)
             {
-                if(!_detected)
-                {
-                    _detected = true;
-                    _target = ray.collider.gameObject.transform;
-                }
-            }else
-            {
-                if(_detected)
-                {
-                    _detected = false;
-                    _target = null;
-                }
-
+                _detected = true;
             }
+        }else if(_detected)
+        {
+            _detected = false;
         }
 
         if (_detected)
         {
-            RotateToTarget();
             if(Time.time > _nextTimeToFire)
             {
                 _nextTimeToFire = Time.time + 1 / _fireRate;
