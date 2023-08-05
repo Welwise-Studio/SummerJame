@@ -12,7 +12,7 @@ public class ObjectPool<T> where T : MonoBehaviour
     {
         _prefab = prefab;
         _factoryAction = factory;
-        _pool = new List<T>(size);
+        _pool = new List<T>(new T[size]);
 
         for (int i = 0; i < size; i++)
         {
