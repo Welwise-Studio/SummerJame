@@ -14,10 +14,10 @@ public class Grenade : MonoBehaviour
     [SerializeField] private float _timeBeforeExplosion = 1f;
 
     [SerializeField] private Rigidbody _rigidbody;
+    [SerializeField] private float _speed;
 
     private const int _maxCollidersCount = 10;
     private float _spawnedTime;
-    private float g = Physics.gravity.y;
 
     private void OnEnable()
     {
@@ -49,14 +49,7 @@ public class Grenade : MonoBehaviour
 
     public void AddForce(Transform targetPos)
     {
-        Vector3 FromTo = targetPos.position - transform.position;
-        Vector3 FromXZ = new Vector3(FromTo.x, 0f, FromTo.z);
-        float x = FromTo.x; float y = FromTo.y;
-        float angleInRadians = 10 * Mathf.PI / 100;
-        float dir = (g * x * x) / (2 * (y - Mathf.Tan(angleInRadians) * x) * Mathf.Pow(Mathf.Cos(angleInRadians), 2));
-        var d = Mathf.Sqrt(Mathf.Abs(dir));
-
-        _rigidbody.velocity = transform.forward * d;
+        _rigidbody.ThrowTo(targetPos.position, ThrowHelper.HeightFromTime((targetPos.position - transform.position).magnitude / _speed, 9.81f));
     }
 
 }
