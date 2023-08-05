@@ -64,14 +64,15 @@ Material:
     - _DstBlend: 0
     - _Glossiness: 0.5
     - _LightSaberFactor: 0.8
-    - _LineScale: 1
-    - _LineWidth: 20
+    - _LineScale: 1.88
+    - _LineWidth: 30.5
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SrcBlend: 1
     - _UVSec: 0
+    - _UvBasedLightSaberFactor: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 0, a: 1}
