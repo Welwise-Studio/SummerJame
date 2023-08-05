@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaserTurret : Turet
 {
-    protected override void Shoot()
+    protected override void Shoot(Transform _targetPos)
     {
         
     }

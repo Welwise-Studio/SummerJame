@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro.EditorUtilities;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public abstract class Turet : MonoBehaviour
@@ -10,8 +6,6 @@ public abstract class Turet : MonoBehaviour
     [SerializeField] protected float _fireRate;
     [SerializeField] protected float _damage;
     [SerializeField] protected float _rotationSpeed;
-    [SerializeField] protected GameObject _projectale;
-    [SerializeField] protected Transform _projectaleSpawn;
 
     protected bool _attached = false; // взяли ли мы турель под контроль
     public bool Attached { get { return _attached; } set { _attached = value; } }
@@ -22,7 +16,7 @@ public abstract class Turet : MonoBehaviour
 
     protected float _nextTimeToFire;
 
-    protected abstract void Shoot();
+    protected abstract void Shoot(Transform _targetPos);
 
     protected virtual void Awake()
     {
@@ -77,7 +71,7 @@ public abstract class Turet : MonoBehaviour
             if(Time.time > _nextTimeToFire)
             {
                 _nextTimeToFire = Time.time + 1 / _fireRate;
-                Shoot();
+                Shoot(_target);
             }
         }
     }
@@ -91,7 +85,7 @@ public abstract class Turet : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Shoot();
+            Shoot(_target);
         }
     }
 
