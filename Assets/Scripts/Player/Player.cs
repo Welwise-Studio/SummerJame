@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,10 +9,19 @@ public class Player : MonoBehaviour
     [SerializeField] private float _rotationForce;
     [SerializeField] private float _rotationError;
     [SerializeField] private float _maxForce;
+    [SerializeField] private float _equippedForce;
     [SerializeField] private AimingSystem _aimingSystem;
+    private Turret _turret;
 
     private Rigidbody _rigidbody;
     private Transform _transform;
+
+    public bool IsReadyForEquip => _turret == null;
+
+    internal void SetEquippedTurret(Turret turret)
+    {
+        _turret = turret;
+    }
 
     private void Awake()
     {
@@ -28,7 +38,7 @@ public class Player : MonoBehaviour
             inputForce.Normalize();
         }
 
-        inputForce *= _maxForce;
+        inputForce *= IsReadyForEquip ? _maxForce : _equippedForce;
 
         _rigidbody.AddForce(inputForce, ForceMode.Force);
 

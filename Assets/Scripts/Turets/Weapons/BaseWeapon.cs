@@ -3,10 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseWeapon : MonoBehaviour
+public abstract class BaseWeapon : MonoBehaviour
 {
-    internal void Shoot()
-    {
-        throw new NotImplementedException();
-    }
+    public bool IsReady { get; protected set; }
+    public abstract void Shoot();
 }

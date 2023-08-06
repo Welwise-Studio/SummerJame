@@ -11,6 +11,10 @@ public class AimingSystem : MonoBehaviour
 
     public Vector3 AimPoint => _aimPoint;
 
+    public System.Action FirePressed;
+    public System.Action EquipPressed;
+    public System.Action UnequipPressed;
+
     private void Awake()
     {
         _plane = new Plane(Vector3.up, Vector3.up * _planeOffset);
@@ -21,6 +25,19 @@ public class AimingSystem : MonoBehaviour
     private void Update()
     {
         UpdatePositionByRaycast(Input.mousePosition);
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+            FirePressed?.Invoke();
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            EquipPressed?.Invoke();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            UnequipPressed?.Invoke();
+        }
     }
 
     public void UpdatePositionByRaycast(Vector3 screenPoint)
