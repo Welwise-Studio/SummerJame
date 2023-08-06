@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public abstract class UnitBehaviour : MonoBehaviour, IDamageable
+public abstract class UnitBehaviour : MonoBehaviour
 {
     #region Public Fields
     public Action OnHealthChange;
