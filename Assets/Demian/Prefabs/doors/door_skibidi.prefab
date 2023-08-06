@@ -92,10 +92,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 871003435857602455}
-  - component: {fileID: 871003435857602454}
-  - component: {fileID: 8194221027835174988}
+  - component: {fileID: 3295334840452968364}
+  - component: {fileID: 4871655406678919381}
+  - component: {fileID: 4432949027705383966}
   m_Layer: 0
-  m_Name: door _metal
+  m_Name: door_skibidi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,7 +120,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!65 &871003435857602454
+--- !u!95 &3295334840452968364
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871003435857602452}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4eb3d28d25e1b543b17776ae699fdb7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &4871655406678919381
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,12 +149,12 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871003435857602452}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.43, y: 2.21, z: 2.11}
-  m_Center: {x: -0.51, y: 0, z: 0}
---- !u!114 &8194221027835174988
+  m_Size: {x: 2.39, y: 2.11, z: 0.23}
+  m_Center: {x: -0.58, y: -0.09, z: 0}
+--- !u!114 &4432949027705383966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,11 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b93183652510040bfb51ac545b8874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _door: {fileID: 225699298669799785}
-  _closeTimerDuration: 4
-  _animationTime: 0.5
-  _openPosition: {x: -0.5, y: -3.01, z: 0}
-  _closePosition: {x: -0.5, y: -1, z: 0}
+  animator: {fileID: 3295334840452968364}
+  _doorCollider: {fileID: 4871655406678919381}
 --- !u!1 &1357507247321474130
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +509,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 225699298669799785}
-  - component: {fileID: 4791177392643057655}
   m_Layer: 0
   m_Name: door it self
   m_TagString: Untagged
@@ -518,19 +536,6 @@ Transform:
   m_Father: {fileID: 871003435857602455}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4791177392643057655
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2486955033021393293}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.2, y: 2, z: 0.2}
-  m_Center: {x: -0.2, y: 1, z: 0}
 --- !u!1 &2858743916036649086
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,7 +813,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 83a381ec050912345a887308765c192a, type: 2}
+  - {fileID: 2100000, guid: 609963c3da6b6ab4b98f5f859e3aa42f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
