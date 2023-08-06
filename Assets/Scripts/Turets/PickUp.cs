@@ -6,7 +6,6 @@ public class PickUp : MonoBehaviour
 {
     [SerializeField] private float _distToPickUp;
     [SerializeField] private GameObject _button;
-    [SerializeField] Turet _turret;
     
     private Player _player;
     private Vector3 _playerPos;
@@ -24,7 +23,6 @@ public class PickUp : MonoBehaviour
             _button.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
             {
-                _turret.Attaching(_player.transform);
             }
         }else
         {
