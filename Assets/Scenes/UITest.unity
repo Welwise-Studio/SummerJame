@@ -691,12 +691,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-    in culpa qui officia deserunt mollit anim id est laborum.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ec5d1b0e64f7f4a8cf83785bef48ff, type: 2}
   m_sharedMaterial: {fileID: -1073258534170064673, guid: b4ec5d1b0e64f7f4a8cf83785bef48ff,
@@ -956,8 +951,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 Space \u0447\u0442\u043E\u0431\u044B
-    \u0443\u0441\u043A\u043E\u0440\u0438\u0442\u044C."
+  m_text: "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 Space \u0447\u0442\u043E\u0431\u044B 
+    \u043F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u0442\u044C."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ec5d1b0e64f7f4a8cf83785bef48ff, type: 2}
   m_sharedMaterial: {fileID: -1073258534170064673, guid: b4ec5d1b0e64f7f4a8cf83785bef48ff,
@@ -1330,8 +1325,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1552126418}
   _panel: {fileID: 1552126413}
-  _delayBase: 0.03
-  _text: {fileID: 840035823}
+  _dialogueText: {fileID: 840035823}
+  _helpText: {fileID: 1458226501}
+  _delay: 0.03
+  _endDelay: 0.2
+  _helpTextInStage: "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 Space \u0447\u0442\u043E\u0431\u044B
+    \u043F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u0442\u044C"
+  _helpTextEndStage: "\u041D\u0430\u0436\u043C\u0438\u0442\u0435 Spce \u0447\u0442\u043E\u0431\u044B
+    \u043F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
+  _texts:
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique diam
+    non augue consequat, vel iaculis nisl aliquam. Sed venenatis, justo non malesuada
+    feugiat, mauris leo semper erat, ut rutrum orci urna eget quam. Aenean semper
+    venenatis augue consectetur feugiat. Sed volutpat eget nisi in porttitor. Maecenas
+    nulla tortor, convallis in sapien id, cursus imperdiet odio. Proin imperdiet,
+    ante id dignissim vehicula, erat lacus luctus ipsum, id pharetra tellus nibh
+    id elit. Nunc eget purus metus. Nam accumsan ultricies sem, sit amet pretium
+    neque ullamcorper eget. Nam fermentum cursus pulvinar. Nam pellentesque consequat
+    consectetur. In non tellus accumsan, viverra est et, feugiat nisl.
+  - Vestibulum sed ante in nunc ornare pharetra nec sed nunc. Duis tincidunt ante
+    et orci cursus vestibulum vel nec lacus. Curabitur sodales aliquam vestibulum.
+    Mauris orci libero, facilisis vitae erat et, volutpat egestas mauris. Vivamus
+    laoreet auctor nisi eu rhoncus. Donec molestie, nisi sit amet aliquet ultricies,
+    eros lacus rhoncus libero, varius lobortis nunc leo in lacus. Nunc mattis interdum
+    tortor et mollis. Cras nec ornare nunc. Pellentesque posuere felis nisi, sit
+    amet suscipit dolor fermentum fermentum. Sed enim tellus, scelerisque eu vehicula
+    in, tempus id lectus. Pellentesque habitant morbi tristique senectus et netus
+    et malesuada fames ac turpis egestas. Curabitur dapibus volutpat tellus, a varius
+    ligula interdum ut. Nullam suscipit semper ligula ac pulvinar. Vivamus facilisis
+    efficitur posuere.
+  - Sed rutrum dapibus placerat. Suspendisse ultricies, risus a luctus ullamcorper,
+    enim ex pellentesque nunc, et suscipit dui nibh eleifend mi. Sed consectetur
+    enim ut ullamcorper consectetur. Nullam viverra ut nunc sed ultrices. Nullam
+    consequat, justo nec imperdiet ultricies, lectus ante cursus mi, ut laoreet leo
+    magna vel massa. Nunc sodales, ex nec dignissim suscipit, nibh arcu dictum nisl,
+    sit amet feugiat dui nunc vel justo. Curabitur congue eu urna vel congue. Pellentesque
+    habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    Nam et diam ultrices, rutrum libero ac, sagittis nisl. Morbi gravida nisl ut
+    eros bibendum feugiat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Maecenas dui justo, placerat sit amet magna vel, ornare faucibus ligula. Morbi
+    fringilla a erat id tristique. Vestibulum vel lacinia tortor, a molestie nunc.
+    Donec luctus ornare ultricies. Class aptent taciti sociosqu ad litora torquent
+    per conubia nostra, per inceptos himenaeos.
+  - Donec eu convallis ipsum, sed facilisis dui. Proin sollicitudin eros ac sapien
+    egestas, id maximus nulla lobortis. Donec quis felis sed lorem sollicitudin ultrices.
+    Nunc venenatis purus augue, at varius nulla fermentum nec. Aenean sit amet venenatis
+    ipsum. Mauris lacinia laoreet quam et porttitor. Pellentesque suscipit mauris
+    elit, ac congue sapien imperdiet sit amet. Sed facilisis sollicitudin tellus
+    a porttitor. Maecenas quis diam nec magna imperdiet facilisis vel a risus. Fusce
+    efficitur sem mauris, eget malesuada erat faucibus vel. Pellentesque sit amet
+    rutrum neque, sed tincidunt diam. Ut sollicitudin odio non libero sodales iaculis.
 --- !u!1 &1854948383
 GameObject:
   m_ObjectHideFlags: 0

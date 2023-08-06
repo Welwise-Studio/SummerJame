@@ -6,72 +6,93 @@ using UnityEngine;
 
 public class DialogueSystem : MonoBehaviour
 {
+    public event Action Completed;
+
+    [Header("References")]
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private GameObject _panel;
-    [SerializeField] private float _delayBase = 0.03f;
-    [SerializeField] private TMP_Text _text;
+    [SerializeField] private TMP_Text _dialogueText;
+    [SerializeField] private TMP_Text _helpText;
 
+    [Header("Gameplay")]
+    [SerializeField] private float _delay = 0.03f;
+    [SerializeField] private float _endDelay = 0.2f;
+    [Space(10)]
+    [SerializeField] private string _helpTextInStage = "Нажмите Space чтобы пропустить";
+    [SerializeField] private string _helpTextEndStage = "Нажмите Spce чтобы продолжить";
+    [Space(10)]
     [Multiline(7)]
     [SerializeField] private String[] _texts;
 
     private bool _isDialogue;
-    private float _currentDelay;
-
-    public event Action Completed; 
+    private bool _breakInsert;
+    private int _currentTextIndex;
 
     private void Awake()
     {
-        Show(_text.text);
+        Completed += () => _panel.SetActive(false);
+    }
+
+    private void Start()
+    {
+        Next();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Skip();
-        }
+            Next();
     }
 
-    public void Skip()
+    private void Next()
     {
-        if (!_isDialogue)
+        if (_panel.activeSelf == false)
             return;
 
-        _currentDelay = _delayBase / 3;
-    }
+        if (_isDialogue)
+        {
+            _breakInsert = true;
+            return;
+        }
 
-    public void Show(string text)
-    {
-        _panel.SetActive(true);
-        StopAllCoroutines();
-        StartCoroutine(Insert(text));
-    }
-
-    public void Hide()
-    {
-        _panel.SetActive(false);
-        StopAllCoroutines();
+        StartCoroutine(Insert());
     }
 
 
-    private IEnumerator Insert(string text)
+    private IEnumerator Insert()
     {
-        _currentDelay = _delayBase;
-        _isDialogue = true;
-        _text.text = "";
-        _audioSource.Play();
         var stringBuilder = new StringBuilder();
+        var text = _texts[_currentTextIndex];
+
+        _isDialogue = true;
+        _helpText.text = _helpTextInStage;
+        _dialogueText.text = "";
+        _audioSource.Play();
+        _breakInsert = false;
+
         for (int i = 0; i < text.Length; i++)
         {
-            _audioSource.pitch = (_delayBase / _currentDelay) * .8f;
-            stringBuilder.Append(text[i]);
-            if (_text.isTextOverflowing)
-                stringBuilder.Remove(0, stringBuilder.Length-2);
+            if (_breakInsert)
+            {
+                _dialogueText.text = text;
+                break;
+            }    
 
-            _text.text = stringBuilder.ToString();
-            yield return new WaitForSeconds(_currentDelay);
+            stringBuilder.Append(text[i]);
+            _dialogueText.text = stringBuilder.ToString();
+            yield return new WaitForSeconds(_delay);
         }
+
         _audioSource.Stop();
         _isDialogue = false;
+        _helpText.text = _helpTextEndStage;
+
+        if (_currentTextIndex == _texts.Length-1)
+        {
+            yield return new WaitForSeconds(_endDelay);
+            Completed?.Invoke();
+        }
+        else
+            _currentTextIndex++;
     }
 }
