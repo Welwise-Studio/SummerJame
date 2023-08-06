@@ -1,12 +1,9 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-    [SerializeField] private List<Transform> _wall;
-
     private const float _minDistance = 1f;
-    private const float _enabledHeight = 1.15f, _disabledHeight = -0.7f;
+    private const float _enabledHeight = 0f, _disabledHeight = -1.8f;
     private Transform _playerTransform;
     private Vector3 _forward;
 
@@ -30,6 +27,6 @@ public class Wall : MonoBehaviour
 
     private void SetHeight(float value)
     {
-        _wall.ForEach(item => item.position.Set(item.position.x, value, item.position.z));
+       transform.position.Set(transform.position.x, value, transform.position.z);
     }
 }
