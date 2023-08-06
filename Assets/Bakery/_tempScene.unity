@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 01df0da3376da44459b93682d6dbba7b,
     type: 2}
-  m_LightingSettings: {fileID: 493915934}
+  m_LightingSettings: {fileID: 841971802}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -124,7 +124,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!850595691 &493915934
+--- !u!850595691 &841971802
 LightingSettings:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,7 +186,7 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
---- !u!1 &1886148409
+--- !u!1 &1930612815
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,8 +194,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1886148411}
-  - component: {fileID: 1886148410}
+  - component: {fileID: 1930612817}
+  - component: {fileID: 1930612816}
   m_Layer: 0
   m_Name: New Game Object
   m_TagString: Untagged
@@ -203,13 +203,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!220 &1886148410
+--- !u!220 &1930612816
 LightProbeGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886148409}
+  m_GameObject: {fileID: 1930612815}
   m_Enabled: 1
   m_SourcePositions:
   - {x: 8.329881, y: 1, z: -6.748281}
@@ -285,13 +285,13 @@ LightProbeGroup:
   - {x: 3.0511813, y: -1, z: -2.9026513}
   - {x: 3.0511813, y: -1, z: -4.7627487}
   m_Dering: 1
---- !u!4 &1886148411
+--- !u!4 &1930612817
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886148409}
+  m_GameObject: {fileID: 1930612815}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.21, y: 1.080873, z: -1.64}
   m_LocalScale: {x: 1, y: 1, z: 1}

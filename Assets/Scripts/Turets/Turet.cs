@@ -89,7 +89,7 @@ public abstract class Turet : MonoBehaviour
         }
     }
 
-    protected void Attaching(Transform target) 
+    public void Attaching(Transform target) 
     {
         
     }
