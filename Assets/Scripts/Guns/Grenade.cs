@@ -14,6 +14,7 @@ public class Grenade : MonoBehaviour
     [SerializeField] private float _timeBeforeExplosion = 1f;
 
     [SerializeField] private Rigidbody _rigidbody;
+    [SerializeField] private ParticleSystem _explosionPrefab;
     [SerializeField] private float _speed;
 
     private const int _maxCollidersCount = 10;
@@ -36,7 +37,7 @@ public class Grenade : MonoBehaviour
     }
     public void Explode()
     {
-        //TODO: Show explode effect
+
         Collider[] colliders = new Collider[_maxCollidersCount];
         int collidersCount = Physics.OverlapSphereNonAlloc(transform.position, _radius, colliders);
 
@@ -44,7 +45,15 @@ public class Grenade : MonoBehaviour
             if (colliders[i].TryGetComponent<IDamageable>(out var damageableObject))
                 damageableObject.TakeDamage(_damage);
 
-        gameObject.SetActive(false); 
+        gameObject.SetActive(false);
+        ShowExplosion();
+    }
+
+    private void ShowExplosion()
+    {
+        var explosion = Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+        explosion.Play();
+        Destroy(explosion, 3f);
     }
 
     public void AddForce(Transform targetPos)
