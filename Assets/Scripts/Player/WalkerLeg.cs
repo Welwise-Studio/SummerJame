@@ -44,12 +44,23 @@ public class WalkerLeg : MonoBehaviour
         _debug = NeedStep;
 
         CheckStep();
+        UpdateStepByError();
 
         if (!Grounded)
         {
             UpdateStepAction();
         }
 
+
+    }
+
+    private void UpdateStepByError()
+    {
+        if (_error > _errorZone * _errorZone)
+        {
+            _startPosition = _idealPoint.position + Vector3.ProjectOnPlane((_idealPoint.position - _transform.position).normalized, Vector3.up);
+            _transform.position = _startPosition;
+        }
     }
 
     private void UpdateStepAction()
