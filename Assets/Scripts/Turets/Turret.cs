@@ -121,15 +121,23 @@ public class Turret : UnitBehaviour
 
     public void Unequip()
     {
-        _player.SetEquippedTurret(null);
-        _playerAiming.FirePressed -= TryShoot;
-        _playerAiming.UnequipPressed -= Unequip;
-        _transform.parent = null;
+        DestroyTurret();
+    }
+
+    public override void Die()
+    {
         DestroyTurret();
     }
 
     public void DestroyTurret()
     {
+        if (_state== State.Equiped)
+        {
+            _player.SetEquippedTurret(null);
+            _playerAiming.FirePressed -= TryShoot;
+            _playerAiming.UnequipPressed -= Unequip;
+            _transform.parent = null;
+        }
         _state = State.Dead;
         var rig = _transform.AddComponent<Rigidbody>();
         rig.velocity = Vector3.up * _destroyUpSpeed;
