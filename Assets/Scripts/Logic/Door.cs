@@ -29,7 +29,6 @@ public class Door : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Enter");
         if (other.TryGetComponent<UnitBehaviour>(out var unit))
         {
             Open();
