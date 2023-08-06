@@ -333,3 +333,548 @@ Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LMA1_final_HDR.lz4" "F:\Tem
 Running seamfixer "F:\Temp\frender" "1" "BakeryTest_LMA1_final_HDR.lz4"
 Running halffloat2hdr "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:/SourceTree/SummerJame/Assets/BakeryLightmaps/BakeryTest_LM0_final.hdr" 1024
 Running halffloat2hdr "F:\Temp\frender/BakeryTest_LMA1_final_HDR.lz4" "F:/SourceTree/SummerJame/Assets/BakeryLightmaps/BakeryTest_LMA1_final.hdr" 1024
+2023-8-5
+Rendering UV GBuffer for BakeryTest_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for BakeryTest_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "F:\Temp\frender" "uvpos_BakeryTest_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "F:\Temp\frender" "uvpos_BakeryTest_LMA1.lz4" 2 0 1 0
+Running ftraceRTX batchpointlightlegacy "F:\Temp\frender" "PointBatch_0_0_3" 4 0 0 batchpointlight_0_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "BakeryTest_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX batchpointlightlegacy "F:\Temp\frender" "PointBatch_1_0_3" 4 0 1 batchpointlight_1_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "BakeryTest_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM00.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_diffuse" 4 16 1 "gi_BakeryTest_LMA10.bin" "BakeryTest_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM01.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_diffuse" 4 16 1 "gi_BakeryTest_LMA11.bin" "BakeryTest_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM02.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_diffuse" 4 16 1 "gi_BakeryTest_LMA12.bin" "BakeryTest_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM03.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_diffuse" 4 16 1 "gi_BakeryTest_LMA13.bin" "BakeryTest_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_final" 4 16 0 "gi_BakeryTest_LM04.bin" "BakeryTest_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_final" 4 16 1 "gi_BakeryTest_LMA14.bin" "BakeryTest_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "F:\Temp\frender" "0" "BakeryTest_LM0_final_HDR.lz4"
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LMA1_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "F:\Temp\frender" "1" "BakeryTest_LMA1_final_HDR.lz4"
+Running halffloat2hdr "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:/SourceTree/SummerJame/Assets/BakeryLightmaps/BakeryTest_LM0_final.hdr" 1024
+Running halffloat2hdr "F:\Temp\frender/BakeryTest_LMA1_final_HDR.lz4" "F:/SourceTree/SummerJame/Assets/BakeryLightmaps/BakeryTest_LMA1_final.hdr" 1024
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 1024x512: 1
+Done
+Rendering UV GBuffer for BakeryTest_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for BakeryTest_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "F:\Temp\frender" "uvpos_BakeryTest_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "F:\Temp\frender" "uvpos_BakeryTest_LMA1.lz4" 2 0 1 0
+Running ftraceRTX batchpointlightlegacy "F:\Temp\frender" "PointBatch_0_0_3" 4 0 0 batchpointlight_0_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "BakeryTest_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX batchpointlightlegacy "F:\Temp\frender" "PointBatch_1_0_3" 4 0 1 batchpointlight_1_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "BakeryTest_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM00.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_diffuse" 4 16 1 "gi_BakeryTest_LMA10.bin" "BakeryTest_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM01.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_diffuse" 4 16 1 "gi_BakeryTest_LMA11.bin" "BakeryTest_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM02.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_diffuse" 4 16 1 "gi_BakeryTest_LMA12.bin" "BakeryTest_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM03.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_diffuse" 4 16 1 "gi_BakeryTest_LMA13.bin" "BakeryTest_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_final" 4 16 0 "gi_BakeryTest_LM04.bin" "BakeryTest_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_final" 4 16 1 "gi_BakeryTest_LMA14.bin" "BakeryTest_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "F:\Temp\frender" "0" "BakeryTest_LM0_final_HDR.lz4"
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LMA1_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LMA1_final_HDR.lz4" 1024 0
+Running seamfixer "F:\Temp\frender" "1" "BakeryTest_LMA1_final_HDR.lz4"
+Running halffloat2hdr "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:/SourceTree/SummerJame/Assets/BakeryLightmaps/BakeryTest_LM0_final.hdr" 1024
+Running halffloat2hdr "F:\Temp\frender/BakeryTest_LMA1_final_HDR.lz4" "F:/SourceTree/SummerJame/Assets/BakeryLightmaps/BakeryTest_LMA1_final.hdr" 1024
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 1024x512: 1
+Done
+Rendering UV GBuffer for BakeryTest_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for BakeryTest_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX batchpointlightprobeshlegacy "F:\Temp\frender" "PointBatch_2_0_3" 1924 0 2 batchpointlight_2_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX texgiprobesh "F:\Temp\frender" "probes_final" 1924 16 2 "gi_probes4.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX addsh "F:\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 1024x512: 1
+Done
+Running ftraceRTX.exe interactive "F:\Temp\frender" a 4 0 0 preview.bin
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 1024x512: 1
+Done
+Rendering UV GBuffer for BakeryTest_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for BakeryTest_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV GBuffer for volumes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos3D "F:\Temp\frender" "uvpos_volumes.lz4" 2 0 3 fixPos3D_3.bin
+Running ftraceRTX fixpos12 "F:\Temp\frender" "uvpos_BakeryTest_LM0.lz4" 2 0 0 0
+Running ftraceRTX fixpos12 "F:\Temp\frender" "uvpos_BakeryTest_LMA1.lz4" 2 0 1 0
+Running ftraceRTX batchpointlightprobeshlegacy "F:\Temp\frender" "PointBatch_2_0_3" 1924 0 2 batchpointlight_2_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX batchpointlightprobeshlegacy "F:\Temp\frender" "PointBatch_3_0_3" 1924 0 3 batchpointlight_3_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "volumes" 4 0 3 comp_3.bin
+Running ftraceRTX batchpointlightlegacy "F:\Temp\frender" "PointBatch_0_0_3" 4 0 0 batchpointlight_0_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "BakeryTest_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX batchpointlightlegacy "F:\Temp\frender" "PointBatch_1_0_3" 4 0 1 batchpointlight_1_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "BakeryTest_LMA1" 4 0 1 comp_1.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM00.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_diffuse" 4 16 1 "gi_BakeryTest_LMA10.bin" "BakeryTest_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM01.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_diffuse" 4 16 1 "gi_BakeryTest_LMA11.bin" "BakeryTest_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM02.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_diffuse" 4 16 1 "gi_BakeryTest_LMA12.bin" "BakeryTest_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM03.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_diffuse" 4 16 1 "gi_BakeryTest_LMA13.bin" "BakeryTest_LMA1_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "F:\Temp\frender" "probes_final" 1924 16 2 "gi_probes4.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "F:\Temp\frender" "volumes_final" 1924 16 3 "gi_volumes4.bin" "volumes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_final" 4 16 0 "gi_BakeryTest_LM04.bin" "BakeryTest_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LMA1_final" 4 16 1 "gi_BakeryTest_LMA14.bin" "BakeryTest_LMA1_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX addsh "F:\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addsh "F:\Temp\frender" "volumes_final_" 4 0 3 shcomp_3.bin
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 1024 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 512 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 256 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 128 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 64 0
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 1024x512: 1
+Done
+Rendering UV GBuffer for BakeryTest_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for BakeryTest_LMA1 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV GBuffer for volumes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX batchpointlightprobeshlegacy "F:\Temp\frender" "PointBatch_2_0_3" 1924 0 2 batchpointlight_2_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX texgiprobesh "F:\Temp\frender" "probes_final" 1924 16 2 "gi_probes4.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX addsh "F:\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 1024x512: 1
+Done
+Rendering UV GBuffer for BakeryTest_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for volumes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX fixpos3D "F:\Temp\frender" "uvpos_volumes.lz4" 2 0 1 fixPos3D_1.bin
+Running ftraceRTX fixpos12 "F:\Temp\frender" "uvpos_BakeryTest_LM0.lz4" 2 0 0 0
+Running ftraceRTX batchpointlightprobeshlegacy "F:\Temp\frender" "PointBatch_2_0_3" 1924 0 2 batchpointlight_2_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "probes" 4 0 2 comp_2.bin
+Running ftraceRTX batchpointlightprobeshlegacy "F:\Temp\frender" "PointBatch_1_0_3" 1924 0 1 batchpointlight_1_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "volumes" 4 0 1 comp_1.bin
+Running ftraceRTX batchpointlightlegacy "F:\Temp\frender" "PointBatch_0_0_3" 4 0 0 batchpointlight_0_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "BakeryTest_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM00.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM01.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM02.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM03.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "F:\Temp\frender" "probes_final" 1924 16 2 "gi_probes4.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgiprobesh "F:\Temp\frender" "volumes_final" 1924 16 1 "gi_volumes4.bin" "volumes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_final" 4 16 0 "gi_BakeryTest_LM04.bin" "BakeryTest_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX addsh "F:\Temp\frender" "probes_final_" 4 0 2 shcomp_2.bin
+Running ftraceRTX addsh "F:\Temp\frender" "volumes_final_" 4 0 1 shcomp_1.bin
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 2048 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 1024 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 512 0
+Running seamfixer "F:\Temp\frender" "0" "BakeryTest_LM0_final_HDR.lz4"
+Running halffloat2hdr "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:/SourceTree/SummerJame/Assets/BakeryLightmaps/BakeryTest_LM0_final.hdr" 1024
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Done
+Running ftraceRTX.exe interactive "F:\Temp\frender" a 4 0 0 preview.bin
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 1024x512: 1
+Done
+Running ftraceRTX.exe interactive "F:\Temp\frender" a 4 0 0 preview.bin
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 1024x512: 1
+Done
+Rendering UV GBuffer for BakeryTest_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "F:\Temp\frender" "uvpos_BakeryTest_LM0.lz4" 2 0 0 0
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 1024x512: 1
+Done
+Rendering UV GBuffer for BakeryTest_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "F:\Temp\frender" "uvpos_BakeryTest_LM0.lz4" 2 0 0 0
+Running ftraceRTX batchpointlightlegacy "F:\Temp\frender" "PointBatch_0_0_3" 4 0 0 batchpointlight_0_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "BakeryTest_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM00.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM01.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM02.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM03.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_final" 4 16 0 "gi_BakeryTest_LM04.bin" "BakeryTest_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 1024 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 512 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 256 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 128 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 64 0
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 1024x512: 1
+Done
+Rendering UV GBuffer for BakeryTest_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "F:\Temp\frender" "uvpos_BakeryTest_LM0.lz4" 2 0 0 0
+Running ftraceRTX batchpointlightlegacy "F:\Temp\frender" "PointBatch_0_0_3" 4 0 0 batchpointlight_0_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "BakeryTest_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM00.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM01.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM02.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM03.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_final" 4 16 0 "gi_BakeryTest_LM04.bin" "BakeryTest_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 1024 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 512 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 256 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 128 0
+Running denoiserLegacy c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 64 0
+Loaded vertex shader: quad.vso
+Loaded pixel shader: skyOutput.pso
+Loaded pixel shader: cookieOutput.pso
+initShaders done
+initScene done
+Num alphas of 1024x512: 1
+Done
+Rendering UV GBuffer for BakeryTest_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Done
+Done
+Running ftraceRTX fixpos12 "F:\Temp\frender" "uvpos_BakeryTest_LM0.lz4" 2 0 0 0
+Running ftraceRTX batchpointlightlegacy "F:\Temp\frender" "PointBatch_0_0_3" 4 0 0 batchpointlight_0_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "BakeryTest_LM0" 4 0 0 comp_0.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM00.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM01.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM02.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_diffuse" 4 16 0 "gi_BakeryTest_LM03.bin" "BakeryTest_LM0_diffuse0_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX texgi "F:\Temp\frender" "BakeryTest_LM0_final" 4 16 0 "gi_BakeryTest_LM04.bin" "BakeryTest_LM0_lights_HDR.lz4" vbTraceTex.bin
+Running denoiser c "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" 1024 0
+Running seamfixer "F:\Temp\frender" "0" "BakeryTest_LM0_final_HDR.lz4"
+Running halffloat2hdr "F:\Temp\frender/BakeryTest_LM0_final_HDR.lz4" "F:/SourceTree/SummerJame/Assets/BakeryLightmaps/BakeryTest_LM0_final.hdr" 1024
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Compressing using quality level 127
+2023-8-6
+Rendering UV GBuffer for BakeryTest_LM0 51
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Rendering UV normal...
+Rendering faceted UV normal...
+Rendering UV pos...
+Rendering smooth UV pos...
+Rendering UV GBuffer for probes 256
+RGBA32F...RGBA8...RGBA8_SRGB...RGBA16F...states...
+Done
+Done
+Running ftraceRTX batchpointlightprobeshlegacy "F:\Temp\frender" "PointBatch_1_0_3" 1924 0 1 batchpointlight_1_0_3.bin
+Running ftraceRTX addmul "F:\Temp\frender" "probes" 4 0 1 comp_1.bin
+Running ftraceRTX texgiprobesh "F:\Temp\frender" "probes_final" 1924 16 1 "gi_probes4.bin" "probes_lights_HDR.lz4" vbTraceTex.bin
+Running ftraceRTX addsh "F:\Temp\frender" "probes_final_" 4 0 1 shcomp_1.bin
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image F:\SourceTree\SummerJame\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
