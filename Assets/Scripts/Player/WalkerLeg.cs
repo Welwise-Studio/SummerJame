@@ -58,7 +58,7 @@ public class WalkerLeg : MonoBehaviour
     {
         if (_error > _errorZone * _errorZone)
         {
-            _startPosition = _idealPoint.position + Vector3.ProjectOnPlane((_idealPoint.position - _transform.position).normalized, Vector3.up);
+            _startPosition = _idealPoint.position + Vector3.ProjectOnPlane((_transform.position- _idealPoint.position).normalized * _errorZone, Vector3.up);
             _transform.position = _startPosition;
         }
     }

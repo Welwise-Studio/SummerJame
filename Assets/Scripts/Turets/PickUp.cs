@@ -16,6 +16,7 @@ public class PickUp : MonoBehaviour
         _playerPos = _player.transform.position;
     }
 
+
     void Update()
     {
         if (Vector3.Distance(transform.position, _playerPos) <= _distToPickUp )

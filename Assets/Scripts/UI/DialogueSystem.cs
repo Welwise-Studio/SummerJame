@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Text;
 using TMPro;
@@ -10,8 +11,13 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField] private float _delayBase = 0.03f;
     [SerializeField] private TMP_Text _text;
 
+    [Multiline(7)]
+    [SerializeField] private String[] _texts;
+
     private bool _isDialogue;
     private float _currentDelay;
+
+    public event Action Completed; 
 
     private void Awake()
     {
