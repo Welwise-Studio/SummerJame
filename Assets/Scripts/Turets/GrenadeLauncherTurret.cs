@@ -24,5 +24,5 @@ public class GrenadeLauncherTurret : Turet
         grenade.transform.rotation = _projectaleSpawn.rotation;
 
         grenade.AddForce(_targetPos);
-    }
+    } 
 }
