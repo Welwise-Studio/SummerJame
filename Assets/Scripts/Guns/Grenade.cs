@@ -53,7 +53,7 @@ public class Grenade : MonoBehaviour
     {
         var explosion = Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
         explosion.Play();
-        Destroy(explosion, 3f);
+        Destroy(explosion.gameObject, 3f);
     }
 
     public void AddForce(Transform targetPos)
