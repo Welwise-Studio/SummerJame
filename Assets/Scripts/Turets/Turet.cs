@@ -15,7 +15,7 @@ public abstract class Turet : MonoBehaviour
     protected Camera _camera;
 
     protected float _nextTimeToFire;
-
+     
     protected abstract void Shoot(Transform _targetPos);
 
     protected virtual void Awake()

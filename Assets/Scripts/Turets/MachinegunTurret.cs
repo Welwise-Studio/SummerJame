@@ -6,6 +6,6 @@ public class MachinegunTurret : Turet
 {
     protected override void Shoot(Transform _targetPos)
     {
-        
+         
     }
 }

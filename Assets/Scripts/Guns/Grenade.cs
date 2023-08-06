@@ -44,7 +44,7 @@ public class Grenade : MonoBehaviour
             if (colliders[i].TryGetComponent<IDamageable>(out var damageableObject))
                 damageableObject.TakeDamage(_damage);
 
-        gameObject.SetActive(false);
+        gameObject.SetActive(false); 
     }
 
     public void AddForce(Transform targetPos)

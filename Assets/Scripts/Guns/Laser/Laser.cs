@@ -77,7 +77,7 @@ public class Laser : MonoBehaviour
 
     private IEnumerator Reloading()
     {
-        while (_lineBehaviour.LineWidth >= 0)
+        while (_lineBehaviour.LineWidth >= 0) 
         {
             _lineBehaviour.LineWidth -= 0.002f;
             yield return null;
