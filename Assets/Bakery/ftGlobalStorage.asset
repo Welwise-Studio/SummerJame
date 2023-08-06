@@ -402,7 +402,8 @@ MonoBehaviour:
   - Assets/Bakery/examples/content/floor_lamp.FBX
   - Assets/Models/Player/Player.fbx
   - Assets/ab51c55b6ffd1c24.fbx
-  uvOverlapAssetList: 00000000ffffffff0101000000000000
+  - Assets/Models/LaserTurret/LaserTurret.fbx
+  uvOverlapAssetList: 00000000ffffffff010100000000000001010000
   xatlasWarningShown: 0
   foundCompatibleSetup: 1
   gpuName: NVIDIA GeForce GTX 1050 Ti
