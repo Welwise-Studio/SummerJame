@@ -20,7 +20,7 @@ public class Player : UnitBehaviour
     private Rigidbody _rigidbody;
     private Transform _transform;
     private bool _controllable;
-    private float _lastEquipedTime = -1f;
+    private float _lastEquipedTime = -100f;
 
     internal void SetEquippedTurret(Turret turret)
     {
