@@ -11,7 +11,7 @@ public class Player : UnitBehaviour
     [SerializeField] private float _maxForce;
     [SerializeField] private float _equippedForce;
     [SerializeField] private AimingSystem _aimingSystem;
-    [SerializeField] private float _equipReloadTime = 5f;
+    [SerializeField] private float _equipReloadTime = 3f;
     [SerializeField] private ReloadingView _reloadingView;
 
     public bool IsReadyForEquip => _turret == null && Time.time > _lastEquipedTime + _equipReloadTime;
@@ -30,7 +30,7 @@ public class Player : UnitBehaviour
         {
             _lastEquipedTime = Time.time;
             if(_reloadingView != null)
-                StartCoroutine(_reloadingView.Show());
+                StartCoroutine(_reloadingView.Show(_equipReloadTime));
         }
     }
 

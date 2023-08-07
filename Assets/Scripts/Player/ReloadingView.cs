@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class ReloadingView : MonoBehaviour
 {
-    public IEnumerator Show()
+    public IEnumerator Show(float seconds)
     {
         gameObject.SetActive(true);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(seconds);
         gameObject.SetActive(false);
         yield break;
     }
