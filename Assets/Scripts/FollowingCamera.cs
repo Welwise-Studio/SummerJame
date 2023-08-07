@@ -16,7 +16,6 @@ public class FollowingCamera : MonoBehaviour
     void Start()
     {
         transform.position = new Vector3(_target.position.x, _target.position.y + _height, _target.position.z - _rearDistance);
-        transform.rotation = Quaternion.LookRotation(_target.position - transform.position);
     }
     void Update()
     {
