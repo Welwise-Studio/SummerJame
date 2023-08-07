@@ -20,7 +20,7 @@ public class Room : MonoBehaviour
     {
         _activeEnemies.Remove(enemy);
 
-        if (_activeEnemies.Count == 0)
+        if(_activeEnemies.Count == 0)
             OpenExitDoor();
     }
 
