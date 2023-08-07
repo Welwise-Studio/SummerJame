@@ -45,6 +45,6 @@ public class MapGlobals : MonoBehaviour
     {
         _music.Stop();
         _gameOverSound.Play();
-        Instantiate(_firePrefab, _player.transform.position, Quaternion.identity);
+        Instantiate(_firePrefab, _player.transform.position, _firePrefab.transform.rotation);
     }
 }

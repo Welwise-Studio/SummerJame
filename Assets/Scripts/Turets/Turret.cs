@@ -182,7 +182,7 @@ public class Turret : UnitBehaviour
     {
         if (_player.IsReadyForEquip)
         {
-            _aimingPoint = _player.transform.position;
+            _aimingPoint = _player.transform.position + Vector3.up * 0.2f;
         }
         else
         {
