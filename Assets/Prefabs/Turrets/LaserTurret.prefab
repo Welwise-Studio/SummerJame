@@ -89,7 +89,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4054078313133811361}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.84, y: 0, z: -2.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -358,6 +358,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6471341307119943320}
     m_Modifications:
+    - target: {fileID: 604887234059088060, guid: ceec615a0b81b6343b9ea56583b96e2b,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.631
+      objectReference: {fileID: 0}
+    - target: {fileID: 604887234059088060, guid: ceec615a0b81b6343b9ea56583b96e2b,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 604887234418800763, guid: ceec615a0b81b6343b9ea56583b96e2b,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.355
+      objectReference: {fileID: 0}
+    - target: {fileID: 604887234418800763, guid: ceec615a0b81b6343b9ea56583b96e2b,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 604887235942414289, guid: ceec615a0b81b6343b9ea56583b96e2b,
         type: 3}
       propertyPath: _meshRenderers.Array.data[0]

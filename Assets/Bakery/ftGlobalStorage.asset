@@ -405,7 +405,8 @@ MonoBehaviour:
   - Assets/Models/LaserTurret/LaserTurret.fbx
   - Assets/Scenes/-.fbx
   - Assets/Models/BulletTurret/Turret.fbx
-  uvOverlapAssetList: 00000000ffffffff0101000000000000010100000101000001010000
+  - Assets/Models/GrenadeTurret/TurretGranade.fbx
+  uvOverlapAssetList: 00000000ffffffff010100000000000001010000010100000101000001010000
   xatlasWarningShown: 0
   foundCompatibleSetup: 1
   gpuName: NVIDIA GeForce GTX 1050 Ti

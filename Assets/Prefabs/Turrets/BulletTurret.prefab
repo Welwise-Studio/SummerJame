@@ -532,6 +532,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6416075695501341629}
     m_Modifications:
+    - target: {fileID: 2065198090732410530, guid: 6f59b1ea96aa35d469c018aa6275db0e,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.646
+      objectReference: {fileID: 0}
+    - target: {fileID: 2065198090732410530, guid: 6f59b1ea96aa35d469c018aa6275db0e,
+        type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2065198090988212680, guid: 6f59b1ea96aa35d469c018aa6275db0e,
         type: 3}
       propertyPath: m_RootOrder
@@ -591,6 +601,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BarrelEnd Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589060480366617785, guid: 6f59b1ea96aa35d469c018aa6275db0e,
+        type: 3}
+      propertyPath: _fireRate
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6589060480366617785, guid: 6f59b1ea96aa35d469c018aa6275db0e,
+        type: 3}
+      propertyPath: _bulletSpeed
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f59b1ea96aa35d469c018aa6275db0e, type: 3}

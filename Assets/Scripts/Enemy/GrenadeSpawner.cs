@@ -22,7 +22,7 @@ public class GrenadeSpawner : MonoBehaviour
         if(Time.time > _lastSpawnTime + _spawnSpeed) 
         {
             Grenade grenade = Instantiate(_prefab, _spawnPoint.transform.position, _spawnPoint.transform.rotation);
-            grenade.AddForce(_target);
+           // grenade.AddForce(_target);
             _lastSpawnTime = Time.time;
         }
     }

@@ -35,6 +35,17 @@ public class Grenade : MonoBehaviour
         yield break;
 
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        _spawnedTime = Mathf.Min(_spawnedTime, Time.time + 0.3f);
+        var component = collision.collider.GetComponentInParent<UnitBehaviour>();
+        if (component!=null)
+        {
+            Explode();
+        }
+    }
+
     public void Explode()
     {
 
@@ -42,8 +53,10 @@ public class Grenade : MonoBehaviour
         int collidersCount = Physics.OverlapSphereNonAlloc(transform.position, _radius, colliders);
 
         for (int i = 0; i < collidersCount; i++)
-            if (colliders[i].TryGetComponent<UnitBehaviour>(out var damageableObject))
-                damageableObject.TakeDamage(_damage);
+        {
+            var component = colliders[i].GetComponentInParent<UnitBehaviour>();
+            component?.TakeDamage(_damage);
+        }
 
         gameObject.SetActive(false);
         ShowExplosion();
@@ -52,13 +65,14 @@ public class Grenade : MonoBehaviour
     private void ShowExplosion()
     {
         var explosion = Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+        explosion.transform.localScale = Vector3.one/2f;
         explosion.Play();
         Destroy(explosion.gameObject, 3f);
     }
 
-    public void AddForce(Transform targetPos)
+    public void AddForce(Vector3 targetPos)
     {
-        _rigidbody.ThrowTo(targetPos.position, ThrowHelper.HeightFromTime((targetPos.position - transform.position).magnitude / _speed, 9.81f));
+        _rigidbody.ThrowTo(targetPos, 0.01f);
     }
 
 }
