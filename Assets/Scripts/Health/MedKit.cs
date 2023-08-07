@@ -5,9 +5,9 @@ public class MedKit : MonoBehaviour
     [SerializeField] private int _healAmount;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out Player player))
+        if (other.TryGetComponent(out PlayerBody player))
         {
-            player.AddHealth(_healAmount);
+            player.Player.AddHealth(_healAmount);
             Destroy(gameObject);
         }
 
