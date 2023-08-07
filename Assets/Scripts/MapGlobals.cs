@@ -12,6 +12,9 @@ public class MapGlobals : MonoBehaviour
     [SerializeField] private AimingSystem _aimingSystem;
     [SerializeField] private Bullet _playerBullet;
     [SerializeField] private Bullet _enemyBullet;
+    [SerializeField] private AudioSource _music;
+    [SerializeField] private AudioSource _gameOverSound;
+    [SerializeField] private GameObject _firePrefab;
 
     private static MapGlobals _instance;
 
@@ -40,6 +43,8 @@ public class MapGlobals : MonoBehaviour
 
     internal void OnPlayerDead()
     {
-      //  throw new NotImplementedException();
+        _music.Stop();
+        _gameOverSound.Play();
+        Instantiate(_firePrefab, _player.transform.position, Quaternion.identity);
     }
 }

@@ -407,7 +407,10 @@ MonoBehaviour:
   - Assets/Models/BulletTurret/Turret.fbx
   - Assets/Models/GrenadeTurret/TurretGranade.fbx
   - Assets/Models/Medkit/Medkit.fbx
-  uvOverlapAssetList: 00000000ffffffff01010000000000000101000001010000010100000101000000000000
+  - Assets/JMO Assets/WarFX/Mesh/icosphere.fbx
+  - Assets/JMO Assets/WarFX/Mesh/CirclePlane12v.FBX
+  - Assets/JMO Assets/WarFX/Mesh/Plane1x1.FBX
+  uvOverlapAssetList: 00000000ffffffff01010000000000000101000001010000010100000101000000000000000000000000000000000000
   xatlasWarningShown: 0
   foundCompatibleSetup: 1
   gpuName: NVIDIA GeForce GTX 1050 Ti

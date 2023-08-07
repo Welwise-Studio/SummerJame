@@ -15,7 +15,7 @@ public class FollowingCamera : MonoBehaviour
 
     void Start()
     {
-        transform.position = new Vector3(_target.position.x, _target.position.y + _height, _target.position.z - _rearDistance);
+        transform.position = new Vector3(_target.position.x - _rearDistance, _target.position.y + _height, _target.position.z - _rearDistance);
     }
     void Update()
     {
@@ -24,7 +24,7 @@ public class FollowingCamera : MonoBehaviour
 
     private void CameraMove()
     {
-        currentVector = new Vector3(_target.position.x, _target.position.y + _height, _target.position.z - _rearDistance);
+        currentVector = new Vector3(_target.position.x - _rearDistance, _target.position.y + _height, _target.position.z - _rearDistance);
         transform.position = Vector3.Lerp(transform.position, currentVector, _returnSpeed * Time.deltaTime);
     }
 }
