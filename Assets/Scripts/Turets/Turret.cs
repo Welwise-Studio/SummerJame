@@ -8,6 +8,8 @@ using UnityEngine.UIElements;
 
 public class Turret : UnitBehaviour
 {
+    public bool CanActivate = false;
+
     [Header("Weapon")]
     [SerializeField] private Transform _horizontalAimingAxis;
     [SerializeField] private Transform _verticalAimingAxis;
@@ -159,10 +161,11 @@ public class Turret : UnitBehaviour
 
     private void TryFindPlayer()
     {
-        if ((_playerTransform.position - _transform.position).sqrMagnitude < _range * _range)
-        {
-            _state = State.Battle;
-        }
+        if (CanActivate)
+            if ((_playerTransform.position - _transform.position).sqrMagnitude < _range * _range)
+            {
+                _state = State.Battle;
+            }
     }
 
     private void TryShoot()
