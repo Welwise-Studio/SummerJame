@@ -42,6 +42,6 @@ public class StartLevel : MonoBehaviour
     {
         _animator.SetTrigger("Out");
         yield return new WaitForSeconds(_endTime);
-        SceneManager.LoadScene(_gameplaySceneName);
+        SceneManager.LoadScene(2);
     }
 }
