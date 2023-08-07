@@ -7,6 +7,7 @@ using UnityEngine;
 public class Player : UnitBehaviour
 {
     [SerializeField] private float _rotationForce;
+    [SerializeField] private float _rotationequippedForce;
     [SerializeField] private float _rotationError;
     [SerializeField] private float _maxForce;
     [SerializeField] private float _equippedForce;
@@ -27,6 +28,7 @@ public class Player : UnitBehaviour
     public override void Die()
     {
         //base.Die();
+        _turret?.Unequip();
         MapGlobals.Instance.OnPlayerDead();
         DisableControls();
     }
@@ -64,6 +66,6 @@ public class Player : UnitBehaviour
         angle *= Mathf.Sign(Vector3.Dot(_aimingSystem.AimPoint - _transform.position, _transform.right));
         angle = Mathf.Clamp(angle, -_rotationError, _rotationError);
         angle /= _rotationError;
-        _rigidbody.AddTorque(Vector3.up * _rotationForce * angle);
+        _rigidbody.AddTorque(Vector3.up * (IsReadyForEquip? _rotationForce: _rotationequippedForce) * angle);
     }
 }

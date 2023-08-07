@@ -144,7 +144,8 @@ public class Turret : UnitBehaviour
             _transform.parent = null;
         }
         _state = State.Dead;
-        var rig = _transform.AddComponent<Rigidbody>();
+        var rig = _transform.GetComponent<Rigidbody>();
+        rig.isKinematic = false;
         rig.velocity = Vector3.up * _destroyUpSpeed;
         rig.angularVelocity = _transform.forward * _destroyRotationSpeed;
         Destroy(gameObject, _destroyDelay);
