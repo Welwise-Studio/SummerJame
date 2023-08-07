@@ -26,11 +26,13 @@ public abstract class UnitBehaviour : MonoBehaviour
     #endregion
 
     protected float _currentHealth;
+    bool _dead = false;
 
     #region Unity Methods
     protected virtual void Awake()
     {
         SetHealth(_startHealth);
+
     }
     protected virtual void OnDrawGizmos()
     {
@@ -39,7 +41,7 @@ public abstract class UnitBehaviour : MonoBehaviour
 
         var tcolor = Gizmos.color;
         Gizmos.color = Color.red;
-        Gizmos.DrawCube(_damageTextPoint.position, _textArea*2);
+        Gizmos.DrawCube(_damageTextPoint.position, _textArea * 2);
         Gizmos.color = tcolor;
     }
     #endregion
@@ -59,6 +61,7 @@ public abstract class UnitBehaviour : MonoBehaviour
         else
             _currentHealth = _maxHealth;
 
+        _dead = false;
         OnHealthChange?.Invoke();
     }
 
@@ -71,10 +74,14 @@ public abstract class UnitBehaviour : MonoBehaviour
 
         _currentHealth = predict;
         OnHealthChange?.Invoke();
+        _dead = false;
     }
 
     public void TakeDamage(float damage)
     {
+        if (_dead)
+            return;
+
         CreateDamageText(damage);
 
         var predict = _currentHealth - damage;
@@ -82,6 +89,7 @@ public abstract class UnitBehaviour : MonoBehaviour
         {
             Die();
             OnDie?.Invoke();
+            _dead = true;
             _currentHealth = _minHealth;
             return;
         }

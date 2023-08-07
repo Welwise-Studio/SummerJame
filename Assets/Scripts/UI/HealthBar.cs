@@ -5,16 +5,17 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    [SerializeField] private Image _healthImage;
-    private UnitBehaviour _player;
-    private void Start()
+    [SerializeField] private RectTransform _healthImage;
+    [SerializeField] private UnitBehaviour _target;
+    private float _startShift;
+
+    private void Awake()
     {
-        _player = GameObject.FindWithTag("Player").GetComponent<UnitBehaviour>();
-        _player.OnHealthChange += UpdateHealth;
+        _startShift = _healthImage.anchoredPosition.x;
     }
 
-    private void UpdateHealth()
+    private void Update()
     {
-        _healthImage.fillAmount = _player.Health / _player.MaxHealth;
+        _healthImage.anchoredPosition = Vector3.right * (_target.Health / _target.MaxHealth) * _startShift;
     }
 }

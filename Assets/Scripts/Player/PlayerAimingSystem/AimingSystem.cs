@@ -46,7 +46,7 @@ public class AimingSystem : MonoBehaviour
 
         if (_plane.Raycast(ray, out float enter))
         {
-            _aimPoint = ray.GetPoint(enter) + Vector3.up;
+            _aimPoint = ray.GetPoint(enter);
         }
     }
 

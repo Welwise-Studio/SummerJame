@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -5,7 +6,7 @@ using UnityEngine;
 
 public class LaserWeapon : BaseWeapon
 {
-
+    [SerializeField] private float _damage = 100f;
     [SerializeField] private float _predelay;
     [SerializeField] private float _fireTime;
     [SerializeField] private float _nextCycle;
@@ -91,10 +92,17 @@ public class LaserWeapon : BaseWeapon
         if (Physics.Raycast(_transform.position, _transform.forward, out RaycastHit hit, 45f))
         {
             _line.SetStartAndEndPoints(Vector3.zero, Vector3.forward * hit.distance);
+            TryToDamage(hit);
         }
         else
         {
             _line.SetStartAndEndPoints(Vector3.zero, Vector3.forward * 45f);
         }
+    }
+
+    private void TryToDamage(RaycastHit hit)
+    {
+        var health = hit.collider.GetComponentInParent<UnitBehaviour>();
+        health?.TakeDamage(_damage * Time.deltaTime);
     }
 }
