@@ -12,6 +12,7 @@ public class RestartLevel : MonoBehaviour
     private IEnumerator Restart()
     {
         yield return new WaitForSeconds(5);
+        Cursor.visible = true;
         SceneManager.LoadScene(0);
         yield break;
     }
