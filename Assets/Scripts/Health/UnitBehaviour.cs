@@ -31,7 +31,7 @@ public abstract class UnitBehaviour : MonoBehaviour
     #region Unity Methods
     protected virtual void Awake()
     {
-        SetHealth(_startHealth);
+        ResetHealth();
 
     }
     protected virtual void OnDrawGizmos()
@@ -52,27 +52,17 @@ public abstract class UnitBehaviour : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void SetHealth(float newHealth)
+    public void ResetHealth()
     {
-        if (newHealth <= _maxHealth)
-        {
-            _currentHealth = newHealth;
-        }
-        else
-            _currentHealth = _maxHealth;
-
+        _currentHealth = _maxHealth;
         _dead = false;
         OnHealthChange?.Invoke();
     }
 
     public void AddHealth(float amount)
     {
-        var predict = _currentHealth + amount;
-
-        if (predict >= _maxHealth)
-            return;
-
-        _currentHealth = predict;
+        _currentHealth += amount;
+        _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
         OnHealthChange?.Invoke();
         _dead = false;
     }
