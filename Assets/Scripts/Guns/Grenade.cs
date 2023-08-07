@@ -42,7 +42,7 @@ public class Grenade : MonoBehaviour
         int collidersCount = Physics.OverlapSphereNonAlloc(transform.position, _radius, colliders);
 
         for (int i = 0; i < collidersCount; i++)
-            if (colliders[i].TryGetComponent<IDamageable>(out var damageableObject))
+            if (colliders[i].TryGetComponent<UnitBehaviour>(out var damageableObject))
                 damageableObject.TakeDamage(_damage);
 
         gameObject.SetActive(false);

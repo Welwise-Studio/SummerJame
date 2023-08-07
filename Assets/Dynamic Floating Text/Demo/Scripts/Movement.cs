@@ -57,7 +57,7 @@ public class Movement : MonoBehaviour
             
             if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, 100f))
             {
-                if (hit.transform.TryGetComponent<IDamageable>(out var damageable))
+                if (hit.transform.TryGetComponent<UnitBehaviour>(out var damageable))
                 {
                     damageable.TakeDamage(Random.Range(10, 20));
                 }

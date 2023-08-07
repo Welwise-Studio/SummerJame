@@ -26,7 +26,7 @@ public class AimingSystem : MonoBehaviour
     {
         UpdatePositionByRaycast(Input.mousePosition);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0))
             FirePressed?.Invoke();
 
         if (Input.GetKeyDown(KeyCode.E))

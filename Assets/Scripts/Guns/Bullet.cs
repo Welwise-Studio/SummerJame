@@ -5,13 +5,12 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private int _damage = 10;
-    [SerializeField] private int _speed = 10;
 
     [SerializeField] private Rigidbody _rigidbody;
 
     public void Hitting(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent<IDamageable>(out var damageableObject))
+        if (collision.gameObject.TryGetComponent<UnitBehaviour>(out var damageableObject))
             damageableObject.TakeDamage(_damage);
 
         gameObject.SetActive(false);
@@ -23,9 +22,9 @@ public class Bullet : MonoBehaviour
         Hitting(collision);
     }
 
-    public void AddForce(Transform targetPos)
+    public void SetSpeed(Vector3 speed)
     {
-        _rigidbody.velocity = (targetPos.position - transform.position).normalized * _speed;
+        _rigidbody.velocity = speed;
         _rigidbody.freezeRotation = true;
     }
 }
