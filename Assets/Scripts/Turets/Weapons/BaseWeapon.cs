@@ -7,4 +7,5 @@ public abstract class BaseWeapon : MonoBehaviour
 {
     public bool IsReady { get; protected set; }
     public abstract void Shoot();
+    public abstract void OnPlayerEquip();
 }

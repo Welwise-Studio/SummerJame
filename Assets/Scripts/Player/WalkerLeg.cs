@@ -18,7 +18,7 @@ public class WalkerLeg : MonoBehaviour
     [SerializeField] private float _stepAngle = 15;
 
     [SerializeField] private bool _debug;
-
+    private AudioSource _audioSource;
     private Transform _transform;
     private Vector3 _stepPoint;
     private float _timer;
@@ -33,6 +33,7 @@ public class WalkerLeg : MonoBehaviour
 
     private void Awake()
     {
+        _audioSource = GetComponent<AudioSource>();
         _transform = transform;
         _transform.SetParent(null);
     }
@@ -76,6 +77,7 @@ public class WalkerLeg : MonoBehaviour
             {
                 _timer = -1f;
                 Grounded = true;
+                _audioSource.Play();
             }
 
         }

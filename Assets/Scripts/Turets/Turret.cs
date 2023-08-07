@@ -61,7 +61,8 @@ public class Turret : UnitBehaviour
             case State.Battle:
                 GetDataFromPlayerPosition();
                 Aiming();
-                TryShoot();
+                if (Vector3.Angle(_verticalAimingAxis.forward, _playerTransform.position - transform.position) < _shootTolerance)
+                    TryShoot();
                 break;
             case State.Equiped:
                 GetPointFromAiming();
@@ -87,6 +88,9 @@ public class Turret : UnitBehaviour
 
     private bool CheckEquip()
     {
+        if (_transform == null)
+            return false;
+
         return ((_transform.position - _playerTransform.position).sqrMagnitude < _equipRange * _equipRange);
     }
 
@@ -106,6 +110,7 @@ public class Turret : UnitBehaviour
     public void Equip()
     {
         _player.SetEquippedTurret(this);
+        _weapon.OnPlayerEquip();
         _state = State.Equiped;
         _transform.parent = _playerTransform;
         _playerAiming.FirePressed += TryShoot;
@@ -131,7 +136,7 @@ public class Turret : UnitBehaviour
 
     public void DestroyTurret()
     {
-        if (_state== State.Equiped)
+        if (_state == State.Equiped)
         {
             _player.SetEquippedTurret(null);
             _playerAiming.FirePressed -= TryShoot;
@@ -174,12 +179,19 @@ public class Turret : UnitBehaviour
 
     private void GetDataFromPlayerPosition()
     {
-        _aimingPoint = _player.transform.position;
+        if (_player.IsReadyForEquip)
+        {
+            _aimingPoint = _player.transform.position;
+        }
+        else
+        {
+            _aimingPoint = _player.transform.position + Vector3.up;
+        }
     }
 
     private void GetPointFromAiming()
     {
-        _aimingPoint = _playerAiming.AimPoint;
+        _aimingPoint = _playerAiming.AimPoint + Vector3.up * 0.5f;
     }
 
     private void Aiming()
