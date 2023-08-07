@@ -3,6 +3,7 @@ using System.Collections;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueSystem : MonoBehaviour
 {
@@ -33,18 +34,13 @@ public class DialogueSystem : MonoBehaviour
         Completed += () => _panel.SetActive(false);
     }
 
-    private void Start()
-    {
-        Next();
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
             Next();
     }
 
-    private void Next()
+    public void Next()
     {
         if (_panel.activeSelf == false)
             return;
