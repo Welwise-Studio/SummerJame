@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StartLevel.unity
     guid: 94e3e4a141ea7e94ab72029b6b38cc0b
   - enabled: 1
-    path: Assets/Scenes/Spider.unity
-    guid: 6efbc18c8ce316f41a5d7b5859ddbd3d
+    path: Assets/Scenes/Level.unity
+    guid: 5760022935cc3f046842ce4908f03040
   m_configObjects: {}
