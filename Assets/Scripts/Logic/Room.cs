@@ -7,21 +7,16 @@ public class Room : MonoBehaviour
     [SerializeField] private Door _entryDoor;
     [SerializeField] private Door _exitDoor;
 
-    private List<UnitBehaviour> _activeEnemies;
-
-    private void Awake()
+    private void Update()
     {
-        _activeEnemies = new List<UnitBehaviour>();
-        _enemies.ForEach(item => _activeEnemies.Add(item));
-        _enemies.ForEach(item => item.OnDie += () => RemoveEnemyFromList(item));
-    }
-
-    private void RemoveEnemyFromList(UnitBehaviour enemy)
-    {
-        _activeEnemies.Remove(enemy);
-
-        if(_activeEnemies.Count == 0)
-            OpenExitDoor();
+        foreach (var enemy in _enemies)
+        {
+            if (enemy!=null)
+            {
+                return;
+            }
+        }
+        OpenExitDoor();
     }
 
     private void OpenExitDoor()
@@ -29,8 +24,5 @@ public class Room : MonoBehaviour
         _exitDoor.Open();
     }
 
-    private void CloseEntryDoor()
-    {
 
-    }
 }
