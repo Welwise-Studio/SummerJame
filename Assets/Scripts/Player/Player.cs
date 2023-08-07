@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +12,7 @@ public class Player : UnitBehaviour
     [SerializeField] private float _equippedForce;
     [SerializeField] private AimingSystem _aimingSystem;
     [SerializeField] private float _equipReloadTime = 5f;
+    [SerializeField] private ReloadingView _reloadingView;
 
     public bool IsReadyForEquip => _turret == null && Time.time > _lastEquipedTime + _equipReloadTime;
 
@@ -25,7 +25,13 @@ public class Player : UnitBehaviour
     internal void SetEquippedTurret(Turret turret)
     {
         _turret = turret;
-        _lastEquipedTime = Time.time;
+
+        if(turret == null)
+        {
+            _lastEquipedTime = Time.time;
+            if(_reloadingView != null)
+                StartCoroutine(_reloadingView.Show());
+        }
     }
 
     public override void Die()
