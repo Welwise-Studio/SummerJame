@@ -1,14 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Turret : UnitBehaviour
 {
-    public bool CanActivate = false;
+    [SerializeField] public bool CanActivate = false;
 
     [Header("Weapon")]
     [SerializeField] private Transform _horizontalAimingAxis;
@@ -29,6 +23,8 @@ public class Turret : UnitBehaviour
     [SerializeField] private float _parentingTime = 0.3f;
     [SerializeField] private Transform _explosionPrefab;
     [SerializeField] private Transform _dirtPrefab;
+
+    protected bool CanAim = true;
 
     private Transform _transform;
     protected private Player _player;
@@ -200,6 +196,9 @@ public class Turret : UnitBehaviour
 
     private void Aiming()
     {
+        if (CanAim == false)
+            return;
+
         var forward = _horizontalAimingAxis.forward;
         var right = _horizontalAimingAxis.right;
         var toPoint = (_aimingPoint - _verticalAimingAxis.position).normalized;

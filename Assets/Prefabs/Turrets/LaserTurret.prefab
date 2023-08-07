@@ -117,6 +117,7 @@ MonoBehaviour:
   _damageTextPoint: {fileID: 0}
   _textArea: {x: 1, y: 1, z: 1}
   _damageTextData: {fileID: 0}
+  CanActivate: 0
   _horizontalAimingAxis: {fileID: 3784030214820687997}
   _verticalAimingAxis: {fileID: 3784030214809110305}
   _range: 5.05
@@ -377,6 +378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: rolloffMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 604887235942414289, guid: ceec615a0b81b6343b9ea56583b96e2b,
+        type: 3}
+      propertyPath: _damage
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 604887235942414289, guid: ceec615a0b81b6343b9ea56583b96e2b,
         type: 3}

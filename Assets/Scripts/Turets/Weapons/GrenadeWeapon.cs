@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class GrenadeWeapon : BaseWeapon
 {
-
-    [SerializeField] private float _fireRate;
+    [SerializeField] private float _reloadingDuration = 4f;
     [SerializeField] private AudioSource _shoot;
     [SerializeField] private Grenade _prefab;
 
     private Transform _transform;
-    private float _timer;
+    private float _lastShootingTime;
 
     public override void OnPlayerEquip()
     {
@@ -19,40 +18,23 @@ public class GrenadeWeapon : BaseWeapon
     private void Awake()
     {
         _transform = transform;
-        _timer = -1f;
+        _lastShootingTime = -1f;
         IsReady = true;
     }
 
-    public override void Shoot()
-    {
-        if (IsReady)
-        {
-            _timer = 1f / _fireRate;
-        }
-    }
-
-
     private void Update()
     {
-        IsReady = _timer < 0f;
-
-        if (_timer > 0f)
-        {
-            _timer -= Time.deltaTime;
-
-            if (_timer <= 0f)
-            {
-                _timer = -1f;
-                Fire();
-            }
-        }
+        if (Time.time > _lastShootingTime + _reloadingDuration && !IsReady)
+            IsReady = true;
     }
 
-    private void Fire()
+    public override void Shoot()
     {
         Grenade grenade = Instantiate(_prefab, _transform.position, Quaternion.identity);
         grenade.AddForce(_transform.position + _transform.forward * 2f);
         grenade.transform.position = _transform.position;
         _shoot.Play();
+        _lastShootingTime = Time.time;
+        IsReady = false;
     }
 }

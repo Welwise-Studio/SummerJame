@@ -150,6 +150,7 @@ MonoBehaviour:
   _damageTextPoint: {fileID: 0}
   _textArea: {x: 1, y: 1, z: 1}
   _damageTextData: {fileID: 0}
+  CanActivate: 0
   _horizontalAimingAxis: {fileID: 344623488593421727}
   _verticalAimingAxis: {fileID: 344623488585978563}
   _range: 3.15
@@ -468,6 +469,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6518979531467433601}
     m_Modifications:
+    - target: {fileID: 4167111319546905618, guid: 23c998ec96c327340972acb0f09f3b56,
+        type: 3}
+      propertyPath: _fireRate
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4167111319546905620, guid: 23c998ec96c327340972acb0f09f3b56,
         type: 3}
       propertyPath: m_RootOrder

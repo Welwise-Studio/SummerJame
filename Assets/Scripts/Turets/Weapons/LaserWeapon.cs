@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class LaserWeapon : BaseWeapon
 {
-    [SerializeField] private float _damage = 100f;
+    [SerializeField] private float _damage = 20f;
     [SerializeField] private float _predelay;
     [SerializeField] private float _fireTime;
     [SerializeField] private float _nextCycle;

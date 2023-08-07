@@ -16,14 +16,11 @@ public class Wall : MonoBehaviour
     private void Update()
     {
         float distance = GetDistance(_playerTransform);
-        Debug.Log(distance);
 
         if (distance < _minDistance && distance > 0)
             SetHeight(_disabledHeight);
         else
             SetHeight(_enabledHeight);
-
-
     }
 
 
