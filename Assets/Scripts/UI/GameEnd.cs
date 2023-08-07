@@ -27,7 +27,7 @@ public class GameEnd : MonoBehaviour
     {
         if (_isInit)
             return;
-
+        gameObject.SetActive(true);
         _self.alpha = 1.0f;
         _animator.SetTrigger("In");
         _isInit = true;

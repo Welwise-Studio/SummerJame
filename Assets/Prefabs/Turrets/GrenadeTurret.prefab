@@ -474,6 +474,11 @@ PrefabInstance:
       propertyPath: _fireRate
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4167111319546905618, guid: 23c998ec96c327340972acb0f09f3b56,
+        type: 3}
+      propertyPath: _reloadingDuration
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4167111319546905620, guid: 23c998ec96c327340972acb0f09f3b56,
         type: 3}
       propertyPath: m_RootOrder

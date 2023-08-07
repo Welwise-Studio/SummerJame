@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _radius: 1
   _damage: 24
-  _timeBeforeExplosion: 10
+  _timeBeforeExplosion: 2
   _rigidbody: {fileID: 1839767513598252476}
   _explosionPrefab: {fileID: 8792436318370892726, guid: 535afc6645bf15e49aae7fa55dc502c5,
     type: 3}

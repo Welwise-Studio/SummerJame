@@ -12,17 +12,20 @@ public class Player : UnitBehaviour
     [SerializeField] private float _maxForce;
     [SerializeField] private float _equippedForce;
     [SerializeField] private AimingSystem _aimingSystem;
-    private Turret _turret;
+    [SerializeField] private float _equipReloadTime = 5f;
 
+    public bool IsReadyForEquip => _turret == null && Time.time > _lastEquipedTime + _equipReloadTime;
+
+    private Turret _turret;
     private Rigidbody _rigidbody;
     private Transform _transform;
     private bool _controllable;
-
-    public bool IsReadyForEquip => _turret == null;
+    private float _lastEquipedTime = -1f;
 
     internal void SetEquippedTurret(Turret turret)
     {
         _turret = turret;
+        _lastEquipedTime = Time.time;
     }
 
     public override void Die()
@@ -33,7 +36,7 @@ public class Player : UnitBehaviour
         DisableControls();
     }
 
-    private void DisableControls()
+    public void DisableControls()
     {
         _controllable = false;
     }
