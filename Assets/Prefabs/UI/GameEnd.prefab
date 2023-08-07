@@ -799,8 +799,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 550.45, y: -340}
-  m_SizeDelta: {x: 1028.4, y: 232.8}
+  m_AnchoredPosition: {x: 440.67, y: -345.6}
+  m_SizeDelta: {x: 808.85, y: 232.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7523857874535546943
 CanvasRenderer:
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '@urko2020 @VaVner @d1ad3m'
+  m_text: '@urko_dyrko @VaVner @d1ad3m'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ec5d1b0e64f7f4a8cf83785bef48ff, type: 2}
   m_sharedMaterial: {fileID: -1073258534170064673, guid: b4ec5d1b0e64f7f4a8cf83785bef48ff,
@@ -1126,7 +1126,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '@hotmilf420 @viachesIavsakhon'
+  m_text: 808JAM @viachesIavsakhon
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b4ec5d1b0e64f7f4a8cf83785bef48ff, type: 2}
   m_sharedMaterial: {fileID: -1073258534170064673, guid: b4ec5d1b0e64f7f4a8cf83785bef48ff,
